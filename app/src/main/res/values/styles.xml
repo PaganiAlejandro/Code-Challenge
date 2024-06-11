@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SearchEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/search_edit_text_bg</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:hint">Buscar recetas</item>
+        <item name="android:textColorHint">#b0b0b0</item>
+        <item name="android:singleLine">true</item>
+    </style>
+</resources>
