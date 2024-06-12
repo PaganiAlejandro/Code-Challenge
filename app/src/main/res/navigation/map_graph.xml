@@ -22,10 +22,47 @@
         <action
             android:id="@+id/action_detailFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
         android:name="com.alepagani.codechallengeyape.presentation.map.MapFragment"
         android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
+        tools:layout="@layout/fragment_map" >
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <argument
+        android:name="name"
+        app:argType="string" />
+    <argument
+        android:name="description"
+        app:argType="string" />
+    <argument
+        android:name="imageUrl"
+        app:argType="string" />
+    <argument
+        android:name="location"
+        app:argType="string" />
 </navigation>

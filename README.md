@@ -7,8 +7,8 @@ curl --request GET \
 	--header 'x-rapidapi-key: c59756d7femsh712ae89294a81e8p175279jsn2a796f9fe7dc'
 
 Steps to access API
-Create an account with Rapid API
-Select FOOD from categories list
-Select Tasty API (https://rapidapi.com/apidojo/api/tasty/)
-Go to the recipes/list endpoint info
-Copy the API key and use it in your project
+1) Create an account with Rapid API
+2) Select FOOD from categories list
+3) Select Tasty API (https://rapidapi.com/apidojo/api/tasty/)
+4) Go to the recipes/list endpoint info
+5) Copy the API key and use it in your project

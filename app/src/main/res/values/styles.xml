@@ -7,4 +7,14 @@
         <item name="android:textColorHint">#b0b0b0</item>
         <item name="android:singleLine">true</item>
     </style>
+
+    <style name="RoundedButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_buton</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
 </resources>

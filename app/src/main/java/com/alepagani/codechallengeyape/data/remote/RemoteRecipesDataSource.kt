@@ -10,7 +10,7 @@ class RemoteRecipesDataSource @Inject constructor(private val apiService: TastyA
         AppConstant.API_HOST,
         AppConstant.API_KEY,
         0,
-        20,
+        40,
         AppConstant.API_TAGS
     )
 }
