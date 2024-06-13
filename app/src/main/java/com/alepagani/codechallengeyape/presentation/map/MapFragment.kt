@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.navArgs
+import com.alepagani.codechallengeyape.BuildConfig
 import com.alepagani.codechallengeyape.R
 import com.alepagani.codechallengeyape.databinding.FragmentMapBinding
 import com.google.android.gms.maps.GoogleMap
@@ -34,8 +35,7 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
     private fun initUI() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-        //val  LALA = BuildConfig.API_KEY_NAME
-        Places.initialize(requireContext(), getString(R.string.google_maps_key))
+        Places.initialize(requireContext(), BuildConfig.MAPS_API_KEY)
         placesClient = Places.createClient(requireContext())
     }
 

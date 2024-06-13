@@ -57,8 +57,8 @@ class HomeViewModel @Inject constructor(private val getRecipesUseCases: getRecip
         }
     }
 
-    private fun recipeContainQueryInInstrucctions(instructions: List<Instruction>, query: String): Boolean {
-        instructions.forEach {
+    private fun recipeContainQueryInInstrucctions(instructions: List<Instruction>?, query: String): Boolean {
+        instructions?.forEach {
             if (it.display_text.contains(query, ignoreCase = true))
                 return true
         }
