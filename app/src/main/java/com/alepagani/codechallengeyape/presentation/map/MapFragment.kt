@@ -34,6 +34,7 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback {
     private fun initUI() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+        //val  LALA = BuildConfig.API_KEY_NAME
         Places.initialize(requireContext(), getString(R.string.google_maps_key))
         placesClient = Places.createClient(requireContext())
     }

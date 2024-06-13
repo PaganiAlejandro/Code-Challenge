@@ -3,6 +3,7 @@ package com.alepagani.codechallengeyape.presentation.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alepagani.codechallengeyape.core.ResultResource
+import com.alepagani.codechallengeyape.data.model.Instruction
 import com.alepagani.codechallengeyape.data.model.RecipeResult
 import com.alepagani.codechallengeyape.domain.getRecipesUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -48,11 +49,19 @@ class HomeViewModel @Inject constructor(private val getRecipesUseCases: getRecip
                 allRecipes
             } else {
                 allRecipes.filter { recipe ->
-                    recipe.name.contains(query, ignoreCase = true) //||
-                        //recipe.ingredients.any { it.contains(query, ignoreCase = true) }
+                    recipe.name.contains(query, ignoreCase = true) ||
+                        recipeContainQueryInInstrucctions(recipe.instructions, query)
                 }
             }
             _recipesStateFlow.emit(ResultResource.Success(filteredList))
         }
+    }
+
+    private fun recipeContainQueryInInstrucctions(instructions: List<Instruction>, query: String): Boolean {
+        instructions.forEach {
+            if (it.display_text.contains(query, ignoreCase = true))
+                return true
+        }
+        return false
     }
 }
